@@ -18,14 +18,14 @@ Transform **natural language into optimized SQL queries** with AI-driven intelli
 
 ## ✨ Key Features
 
-🤖 **AI-Powered Translation** — Convert plain English to optimized SQL using GPT-4
-⚡ **Smart Query Execution** — Run queries safely with built-in validation
-🛡️ **Read-Only Safety Guard** — Only `SELECT`/`WITH` statements ever reach the database; mutating statements (`INSERT`, `UPDATE`, `DELETE`, `DROP`, etc.) are blocked before execution
-🔍 **Performance Analysis** — Get execution plans and indexing recommendations via `EXPLAIN`
-🎨 **Interactive Web UI** — User-friendly Streamlit interface
-🚀 **REST API Ready** — FastAPI backend with interactive Swagger docs
-📊 **Auto Row Limiting** — Generated queries are automatically capped to a safe row count
-✅ **Query Validation** — Syntax and safety checking before anything runs
+- 🤖 **AI-Powered Translation** - Convert plain English to optimized SQL using GPT-4
+- ⚡ **Smart Query Execution** - Run queries safely with built-in validation
+- 🛡️ **Read-Only Safety Guard** - Only `SELECT`/`WITH` statements ever reach the database; mutating statements (`INSERT`, `UPDATE`, `DELETE`, `DROP`, etc.) are blocked before execution
+- 🔍 **Performance Analysis** - Get execution plans and indexing recommendations via `EXPLAIN`
+- 🎨 **Interactive Web UI** - User-friendly Streamlit interface
+- 🚀 **REST API Ready** - FastAPI backend with interactive Swagger docs
+- 📊 **Auto Row Limiting** - Generated queries are automatically capped to a safe row count
+- ✅ **Query Validation** - Syntax and safety checking before anything runs
 
 ---
 
@@ -170,7 +170,7 @@ QueryZen/
 
 ## 🛡️ Safety
 
-QueryZen only ever generates and executes **read-only `SELECT`/`WITH` statements**. Any query — whether AI-generated or manually submitted through the API — that contains mutating keywords (`INSERT`, `UPDATE`, `DELETE`, `DROP`, `ALTER`, `TRUNCATE`, `CREATE`, `GRANT`, etc.) is rejected before it ever reaches the database. Queries without an explicit `LIMIT` are automatically capped (`DEFAULT_ROW_LIMIT`, default 200 rows) to keep things fast and safe against accidentally scanning huge tables.
+QueryZen only ever generates and executes **read-only `SELECT`/`WITH` statements**. Any query - whether AI-generated or manually submitted through the API - that contains mutating keywords (`INSERT`, `UPDATE`, `DELETE`, `DROP`, `ALTER`, `TRUNCATE`, `CREATE`, `GRANT`, etc.) is rejected before it ever reaches the database. Queries without an explicit `LIMIT` are automatically capped (`DEFAULT_ROW_LIMIT`, default 200 rows) to keep things fast and safe against accidentally scanning huge tables.
 
 ---
 
@@ -179,15 +179,15 @@ QueryZen only ever generates and executes **read-only `SELECT`/`WITH` statements
 ### Database Support
 
 - **MySQL** (default, fully implemented)
-- PostgreSQL / SQL Server / Snowflake (drivers scaffolded — swap the SQLAlchemy connection string in `database.py` to extend)
+- PostgreSQL / SQL Server / Snowflake (drivers scaffolded - swap the SQLAlchemy connection string in `database.py` to extend)
 
 ### AI Models
 
 Configurable via `OPENAI_MODEL` in `.env`:
 
-- **gpt-4o** (recommended — default)
+- **gpt-4o** (recommended - default)
 - **gpt-4** (higher cost, comparable quality)
-- **gpt-4o-mini** (faster, cheaper — good for demos)
+- **gpt-4o-mini** (faster, cheaper - good for demos)
 
 ---
 
