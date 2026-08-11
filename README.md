@@ -89,7 +89,7 @@ Natural Language Input
 ### 1️⃣ Installation
 
 ```bash
-git clone https://github.com/yourusername/QueryZen.git
+git clone https://github.com/yourusername/AI-SQL-Query-Generator.git
 cd QueryZen
 
 # Create virtual environment
